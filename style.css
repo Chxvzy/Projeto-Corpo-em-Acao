@@ -4,8 +4,12 @@
 
    Como funciona o layout no desktop (>= 901 px):
    - cada faixa (.sec) é um "container" e a vitrine (.stage) tem a
-     largura do desenho (1440 u). A unidade --u vale 1px em 1440 px e
-     encolhe proporcionalmente em telas menores (nunca passa de 1px).
+     largura do desenho (1440 u). A unidade --u vale exatamente 1px em
+     1440 px e encolhe proporcionalmente abaixo disso. Acima de 1440 px
+     ela NÃO cresce: tamanhos iguais aos do Figma em qualquer tela
+     grande (1920x1080 etc.), conteúdo centralizado e faixas de cor em
+     largura total. Em telas grandes só a distância entre alguns
+     elementos aumenta (ver bloco "TELAS GRANDES").
    - os elementos .p são posicionados com as coordenadas do Figma
      (--x, --y em px do desenho, relativas ao topo da faixa).
    Em telas <= 900 px o layout vira fluxo normal (ver final do arquivo).
@@ -342,6 +346,30 @@ button { font: inherit; }
 .rl-faq       { --x: 1137; --y: 122; }
 .rl-telefones { --x: 1137; --y: 162; }
 .rl-chat      { --x: 1137; --y: 202; }
+
+/* =========================================================
+   TELAS GRANDES (> 1440 px, ex.: 1920x1080)
+   Os tamanhos continuam IGUAIS aos do Figma; só a distância
+   horizontal entre os elementos aumenta, afastando-os do centro
+   (cabeçalho, hero, cards, sistemas, equipe e rodapé vão para as
+   pontas). O afastamento cresce até 1920 px e para aí.
+   Títulos, "Você sabia?", vídeos e glossário continuam centralizados.
+   ========================================================= */
+@media (min-width: 1441px) {
+    .logo, .menu__link, .jogo,
+    .hero__titulo, .hero__botao, .hero__imagem,
+    .card--digestorio, .card--coracao, .card--pulmao,
+    .sistema,
+    .foto,
+    .rodape__logo, .rodape__slogan, .social,
+    .rodape__titulo, .rodape__link {
+        left: calc(
+            var(--x) * 1px
+            + (var(--x) - 720) / 720
+              * max(0px, min(100cqw, 1920px) - 1440px) / 2
+        );
+    }
+}
 
 /* =========================================================
    MOBILE / TABLET (<= 900 px) — o Figma só existe em 1440 px,
