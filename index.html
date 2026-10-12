@@ -1,303 +1,212 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="main.js" crossorigin="anonymous"></script>
+    <title>Corpo em Ação - HOME</title>
+    <link rel="shortcut icon" type="image/png" href="./images/brain.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
     <script src="./js/siema.min.js" defer></script>
     <script src="./js/main.js" defer></script>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
-    <title>Corpo em Ação - HOME</title> 
-      <link rel="shortcut icon" 
-      type="images/x-icon"
-       href="/images/brain.png">
 </head>
 <body>
 
-    <header id="header">
-        <div class="container">
+    <!-- CABEÇALHO -->
+    <header class="sec topo" id="header">
+        <div class="stage">
+            <a href="./index.html" class="p logo poppins">CORPO<span>em</span>AÇÃO</a>
 
-          <div class="flex">
-         
-               <a href="index.html" class="logo">CORPO<span>em</span>AÇÃO</a>
-              
-                <nav>
-                    <ul>
-                        <li> <a href="/pages/digestorio.html">Sistemas</a></li>
-                        <li> <a href="/pages/curiosidades.html">Curiosidades</a></li>
-                        <li> <a href="/pages/Glossario.html">Glossário</a></li>
-                        <li> <a href="/pages/cadastro.html">Cadastro</a></li>
-                        <li> <a href="/pages/login.html">Login</a></li>
-                    </ul>
-                </nav>
+            <nav class="menu mont">
+                <a class="p menu__link menu__link--sistemas" href="./pages/digestorio.html">Sistemas</a>
+                <a class="p menu__link menu__link--curiosidades" href="./pages/curiosidades.html">Curiosidades</a>
+                <a class="p menu__link menu__link--glossario" href="./pages/Glossario.html">Glossário</a>
+            </nav>
 
-                <div class="login">
-                    <a href="/pages/inicio.html"><button>Jogo</button></a>
+            <!-- Quem clica em Jogo passa por login/cadastro (main.js ajusta o destino se já estiver logado) -->
+            <a class="p jogo mont" id="jogo" href="./pages/login.html">Jogo</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="sec hero">
+            <div class="stage">
+                <h1 class="p hero__titulo poppins">Explore o corpo<br>humano de forma<br>divertida e interativa</h1>
+
+                <a class="p hero__botao btn-verde open" href="./pages/digestorio.html">Explorar Agora</a>
+
+                <img class="p hero__imagem" src="./images/corpoemAção (2).png" alt="Corpo humano">
+
+                <div class="p hero__linha" aria-hidden="true"></div>
+
+                <a class="p seta hero__seta" href="#sistemas" aria-label="Ir para os sistemas do corpo humano">
+                    <img src="./images/arrow_botton.svg" alt="">
+                </a>
+            </div>
+        </section>
+
+        <!-- O QUE VOCÊ QUER DESCOBRIR HOJE? -->
+        <section class="sec descobrir">
+            <div class="stage">
+                <h2 class="p descobrir__titulo titulo-35 open"> O que você quer descobrir hoje?</h2>
+
+                <a class="p card card--digestorio poppins" href="./pages/digestorio.html">
+                    <img class="card__icone" src="./images/Texto do seu parágrafo (1).png" alt="">
+                    <span class="card__texto">Qual o caminho<br>da comida?</span>
+                </a>
+
+                <a class="p card card--coracao poppins" href="./pages/cardiaco.html">
+                    <img class="card__icone" src="./images/Texto do seu parágrafo (2).png" alt="">
+                    <span class="card__texto">Como que o<br>coração bate?</span>
+                </a>
+
+                <a class="p card card--pulmao poppins" href="./pages/respiratorio.html">
+                    <img class="card__icone" src="./images/Texto do seu parágrafo (3).png" alt="">
+                    <span class="card__texto">Como nós respiramos?</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- SISTEMAS + VOCÊ SABIA + VÍDEOS -->
+        <section class="sec conteudo" id="sistemas">
+            <div class="stage">
+                <h2 class="p sistemas__titulo titulo-35 open">Conheça os sistemas do corpo humano</h2>
+
+                <div class="sistemas__lista poppins">
+                    <a class="p sistema sistema--digestorio" href="./pages/digestorio.html">
+                        <img src="./images/Design_sem_nome_7.png" alt="">
+                        <span class="sistema__nome">Digestório</span>
+                    </a>
+                    <a class="p sistema sistema--respiratorio" href="./pages/respiratorio.html">
+                        <img src="./images/Design_sem_nome_6.png" alt="">
+                        <span class="sistema__nome">Respiratório</span>
+                    </a>
+                    <a class="p sistema sistema--circulatorio" href="./pages/cardiaco.html">
+                        <img src="./images/Design_sem_nome_5.png" alt="">
+                        <span class="sistema__nome">Circulatório</span>
+                    </a>
+                    <a class="p sistema sistema--nervoso" href="./pages/nervoso.html">
+                        <img src="./images/Design_sem_nome_9.png" alt="">
+                        <span class="sistema__nome">Nervoso</span>
+                    </a>
+                    <a class="p sistema sistema--muscular" href="./pages/muscular.html">
+                        <img src="./images/musculoIcon.png" alt="">
+                        <span class="sistema__nome">Muscular</span>
+                    </a>
+                </div>
+
+                <div class="p sabia">
+                    <h2 class="p sabia__titulo mont">Você Sabia?</h2>
+                    <p class="p sabia__texto open">Você tem mais bactérias na boca<br>do que pessoas no mundo!</p>
+                    <a class="p sabia__botao btn-verde open" href="./pages/curiosidades.html">Saiba mais</a>
+                    <img class="p sabia__imagem" src="./images/S_1.png" alt="Cérebro com uma lâmpada acesa">
+                </div>
+
+                <a class="p seta conteudo__seta" href="#grupo" aria-label="Ir para a equipe do projeto">
+                    <img src="./images/arrow_botton.svg" alt="">
+                </a>
+
+                <h2 class="p videos__titulo open">Assista vídeos explicativos!</h2>
+
+                <div class="videos__carrossel poppins">
+                    <button class="p seta videos__prev prev" type="button" aria-label="Vídeo anterior">
+                        <img src="./images/arrow_left.svg" alt="">
+                    </button>
+
+                    <div class="p siema">
+                        <div class="slide">
+                            <a href="https://youtu.be/OQy1lcyK52A?si=Lks7bn0QhSsvJHDq" target="_blank" rel="noopener"><img src="./images/video.png" alt="Vídeo do sistema digestório"></a>
+                            <p class="legenda">Sistema Digestorio...</p>
+                        </div>
+                        <div class="slide">
+                            <a href="https://youtu.be/qK1KksFJkEI?si=I2X0iP_UUuLeVMed" target="_blank" rel="noopener"><img src="./images/video.png" alt="Vídeo do sistema respiratório"></a>
+                            <p class="legenda">Sistema Respiratório...</p>
+                        </div>
+                        <div class="slide">
+                            <a href="https://youtu.be/89aQ8HufFy8?si=9I2ZANPtxSRvzs2c" target="_blank" rel="noopener"><img src="./images/video.png" alt="Vídeo do sistema circulatório"></a>
+                            <p class="legenda">Sistema Circulatório...</p>
+                        </div>
+                        <div class="slide">
+                            <a href="https://youtu.be/KBaRemG4_s0?si=nZOizbafinyHx4hk" target="_blank" rel="noopener"><img src="./images/video.png" alt="Vídeo do sistema nervoso"></a>
+                            <p class="legenda">Sistema Nervoso...</p>
+                        </div>
+                        <div class="slide">
+                            <a href="https://youtu.be/NupItLV0b1Q?si=z6t45yQsExGJc6yo" target="_blank" rel="noopener"><img src="./images/video.png" alt="Vídeo do sistema muscular"></a>
+                            <p class="legenda">Sistema Muscular...</p>
+                        </div>
+                    </div>
+
+                    <button class="p seta videos__next next" type="button" aria-label="Próximo vídeo">
+                        <img src="./images/arrow_right.svg" alt="">
+                    </button>
                 </div>
             </div>
-
-        </div> 
-
- 
-    </header>
-      
-
-   <!--EXPLORAR-->
-     <main>
-        <section class="conteudo">
-            <div class="texto">
-                <h1>Explore o corpo <br> humano de forma<br>divertida e interativa</h1>
-                <a href="./pages/digestorio.html" class="explorar">Explorar Agora</a>
-            </div>
-           
-            <div class="imagem">
-                <img src="./images/corpoemAção (2).png" alt="Corpo humano">
-            </div>
-            
         </section>
-         <div class="barra"></div> 
+
+        <!-- GLOSSÁRIO -->
+        <section class="sec glossario" id="termos">
+            <div class="stage">
+                <img class="p glossario__imagem" src="./images/cerebro-pensando.png" alt="Cérebro pensando">
+                <h2 class="p glossario__titulo open">Não entendeu um termo?</h2>
+                <p class="p glossario__texto open">Clique aqui e aprenda rapidinho no glossário.</p>
+                <a class="p glossario__botao btn-verde open" href="./pages/Glossario.html">Explorar Termos</a>
+            </div>
+        </section>
+
+        <!-- EQUIPE -->
+        <section class="sec equipe" id="grupo">
+            <div class="stage">
+                <h2 class="p equipe__titulo titulo-35 open">Conheça a equipe responsável do projeto!</h2>
+
+                <a class="p foto foto--1" href="https://link-felipelorenzo12c.vercel.app" target="_blank" rel="noopener"><img src="./images/chaves-foto.jfif" alt="Felipe Lorenzo"></a>
+                <a class="p foto foto--2" href="https://linktree-three-beta.vercel.app/" target="_blank" rel="noopener"><img src="./images/josefoto.png" alt="José Guilherme"></a>
+                <a class="p foto foto--3" href="https://link-tree-2zbydsmsy-davicratz12cs-projects.vercel.app/" target="_blank" rel="noopener"><img src="./images/davi-foto.png" alt="Davi Moisés"></a>
+                <a class="p foto foto--4" href="https://projeto-de-links-site.vercel.app" target="_blank" rel="noopener"><img src="./images/erika-foto.png" alt="Erika Rodrigues"></a>
+                <a class="p foto foto--5" href="https://meuslinks-pedro.vercel.app" target="_blank" rel="noopener"><img src="./images/pedro-foto.png" alt="Pedro Henrique"></a>
+                <a class="p foto foto--6" href="https://meuslinkslegais.vercel.app/" target="_blank" rel="noopener"><img src="./images/eros-foto.png" alt="Eros Max"></a>
+
+                <a class="p seta equipe__seta" href="#header" aria-label="Voltar ao topo">
+                    <img src="./images/arrow_top.svg" alt="">
+                </a>
+            </div>
+        </section>
     </main>
 
-    <div class="setabaixo1">
-      <a href="#sistemas">
-        <button> <img src="./images/arrow_botton.svg" alt=""></button>
-      </a>
-    </div>
+    <!-- RODAPÉ -->
+    <footer class="sec rodape">
+        <div class="stage poppins">
+            <h2 class="p rodape__logo">CORPO<span>em</span>AÇÃO</h2>
+            <p class="p rodape__slogan">Aprender sobre si mesmo nunca foi tão legal!</p>
 
+            <a class="p social social--youtube" href="https://www.youtube.com/channel/UCZgp4bOhS336x8pbJiYvrXQ" target="_blank" rel="noopener"><img src="./images/youtube.png" alt="YouTube"></a>
+            <a class="p social social--instagram" href="https://www.instagram.com/corpo_em_acao_21cti" target="_blank" rel="noopener"><img src="./images/instagram.png" alt="Instagram"></a>
+            <img class="p social social--facebook" src="./images/face.png" alt="Facebook">
 
-    <div class="oque-descobrir">
-
-        <div class="h2-oque-descobrir">
-          <h2> O que você quer descobrir hoje?</h2>
-        </div>
-      
-        <div class="icones-descobrir">
-      
-          <a href="./pages/digestorio.html">
-            <div class="item-descobrir-1">
-              <img src="./images/Texto do seu parágrafo (1).png" alt="">
-              <p>Qual o caminho<br> da comida?</p>
-            </div>
-          </a>
-      
-          <a href="./pages/cardiaco.html">
-            <div class="item-descobrir-2">
-              <img src="./images/Texto do seu parágrafo (2).png" alt="">
-              <p>Como que o<br> coração bate?</p>
-            </div>
-          </a>
-      
-          <a href="./pages/respiratorio.html">
-            <div class="item-descobrir-3">
-              <img src="./images/Texto do seu parágrafo (3).png" alt="">
-              <p>Como nós<br> respiramos?</p>
-            </div>
-          </a>
-      
-         </div>
-
-         
-
-        </div>
-      
-        <div class="h2-icones-temas">
-        <h2>Conheça os sistemas do corpo humano</h2>
-      </div>
-      
-          <div class="icones-temas"  id="sistemas">
-      
-      <div class="item-icone">
-       
-        <a href="/pages/digestorio.html"><img src="./images/Design_sem_nome_7.png" alt=""></a>
-        <p>Digestório</p>
-       
-      </div>
-      
-      <div class="item-icone">
-        <a href="./pages/respiratorio.html"><img src="./images/Design_sem_nome_6.png" alt=""></a>
-        <p>Respiratório</p>
-      </div>
-      
-      <div class="item-icone">
-       <a href="./pages/cardiaco.html"> <img src="./images/Design_sem_nome_5.png" alt=""> </a>
-        <p>Circulatório</p>
-      </div>
-      
-      <div class="item-icone">
-        <a href="./pages/nervoso.html"><img src="./images/Design_sem_nome_9.png" alt=""></a>
-        <p>Nervoso</p>
-      </div>
-      
-      <div class="item-icone">
-        <a href="./pages/muscular.html"><img src="./images/musculoIcon.png" alt=""></a>
-        <p>Muscular</p>
-      </div>
-          
-      </div>
-      
-      <div class="voce-sabia">
-        <div class="textos-voce-sabia">
-        <h2>Você Sabia?</h2>
-        <h3>Você tem mais bactérias na boca<br> do que pessoas no mundo!</h3>
-        <a href="./pages/curiosidades.html" class="gloss">Saiba mais</a>
-      
-      </div>
-        <img src="./images/S_1.png" alt="icone cerebro do voce sabia">
-      </div>
-      </div>
-
-      <div class="setabaixo2">
-        <a href="#grupo">
-          <button> <img src="./images/arrow_botton.svg" alt=""></button>
-        </a>
-      </div>
-
-      <div class="videos">
-        <h2>Assista vídeos explicativos!</h2>
-      </div>
-
-      <div class="slider">
-        <button class="prev">
-          <img src="./images/arrow_left.svg" alt="">
-        </button>
-        
-    <div class="siema">
-      <div class="digest">
-      <a href="https://youtu.be/OQy1lcyK52A?si=Lks7bn0QhSsvJHDq" target="_blank"><img src="./images/video.png" alt="video sistema digestório"></a>
-      <strong>Sistema Digestorio...</strong>
-      </div>
-      <div class="resp">
-      <a href="https://youtu.be/qK1KksFJkEI?si=I2X0iP_UUuLeVMed" target="_blank"><img src="./images/video.png" alt="video sistema digestório"></a>
-      <strong>Sistema Respiratório...</strong>
-    </div>
-    <div class="circ">
-      <a href="https://youtu.be/89aQ8HufFy8?si=9I2ZANPtxSRvzs2c" target="_blank"><img src="./images/video.png" alt="video sistema digestório"></a>
-      <strong>Sistema Circulatório...</strong>
-    </div>
-    <div class="nerv">
-      <a href="https://youtu.be/KBaRemG4_s0?si=nZOizbafinyHx4hk" target="_blank"><img src="./images/video.png" alt="video sistema digestório"></a>
-      <strong>Sistema Nervoso...</strong>
-    </div>
-    <div class="musc">
-      <a href="https://youtu.be/NupItLV0b1Q?si=z6t45yQsExGJc6yo" target="_blank"><img src="./images/video.png" alt="video sistema digestório"></a>
-      <strong>Sistema Muscular...</strong>
-    </div>
-    </div>
-
-    <button class="next">
-      <img src="./images/arrow_right.svg" alt="">
-    </button>
-      </div>
-
-      <div class="explorar-termos">
-
-        <img src="./images/cerebro-pensando.png" alt="imagem-de-cerebro-pensando">
-      
-      <div class="textos-explorar"  id="termos">
-        <h1>Não entendeu um termo?</h1>
-        <h2>Clique aqui e aprenda rapidinho no glossário.</h2>
-      
-        <a href="./pages/Glossario.html" class="gloss">Explorar termos</a>
-      </div>
-
-
-      </div>
-    </div>
-  </div>
-
-
-  <div class="nosso-grupo" id="grupo">
-    <h2>Conheça a equipe responsável do projeto!</h2>
-  
-  <div class="fotos">
-  
-  <div class="chaves-foto">
-    
-    <a href="https://link-felipelorenzo12c.vercel.app" target="_blank"><img src="images/chaves-foto.jfif" alt=""></a>
-    <a href="https://link-felipelorenzo12c.vercel.app" target="_blank">Felipe Lorenzo</a>
-  </div>
-
-  <div class="jose-foto">
-    <a href="https://linktree-three-beta.vercel.app/" target="_blank"><img src="images/josefoto.png" alt=""></a>
-     <a href="https://linktree-three-beta.vercel.app/" target="_blank">José Guilherme</a>
-  </div>
-  
-  <div class="davi-foto">
-    <a href="https://link-tree-2zbydsmsy-davicratz12cs-projects.vercel.app/" target="_blank"><img src="images/davi-foto.png" alt=""></a>
-    <a href="https://link-tree-2zbydsmsy-davicratz12cs-projects.vercel.app/" target="_blank">Davi Moisés</a>
-  </div>
-  
-  <div class="erika-foto">
-    
-    <a href="https://projeto-de-links-site.vercel.app" target="_blank"><img src="./images/erika-foto.png" alt=""></a>
-    <a href="https://projeto-de-links-site.vercel.app" target="_blank">Erika Rodrigues</a>
-  </div>
-  
-  <div class="pedro-foto">
-    <a href="https://meuslinks-pedro.vercel.app" target="_blank"><img src="./images/pedro-foto.png" alt=""></a>
-    <a href="https://meuslinks-pedro.vercel.app" target="_blank">Pedro Henrique</a>
-  </div>
-  
-  <div class="eros-foto">
-    <a href="https://meuslinkslegais.vercel.app/" target="_blank">    <img src="./images/eros-foto.png" alt=""></a>
-
-    <a href="https://meuslinkslegais.vercel.app/" target="_blank">Eros Max</a>
-  </div>
-  </div>
-
-  <div class="setacima">
-    <a href="#header">
-      <button> <img src="./images/arrow_top.svg" alt=""></button>
-    </a>
-  </div>
-
-<!--rodapé-->
-       <footer>
-        <div class="footer-container">
-            <!-- Logo e descrição -->
-            <div class="footer-logo">
-                <h2>CORPO<span>emAÇÃO</span></h2>
-                <p>Aprender sobre si mesmo nunca foi tão legal!</p>
-                <div class="social-icons">
-                    <a href="https://www.youtube.com/channel/UCZgp4bOhS336x8pbJiYvrXQ" target="_blank"><img src="./images/youtube.png" alt="YouTube"></a>
-                    <a href="https://www.instagram.com/corpo_em_acao_21cti" target="_blank"><img src="./images/instagram.png" alt="Instagram"></a>
-                    <img src="./images/face.png" alt="Facebook">
-                </div>
+            <div class="rodape__menu">
+                <h3 class="p rodape__titulo rt-1">Inicio</h3>
+                <a class="p rodape__link rl-home" href="#header">Home</a>
+                <a class="p rodape__link rl-cursos" href="https://cursosabeline.com.br/curso/gratis/anatomia-e-fisiologia-humana" target="_blank" rel="noopener">Cursos</a>
+                <a class="p rodape__link rl-downloads" href="https://drive.google.com/drive/folders/1iohFhmsldMVFnj0c7UeRBglupQSvEgLR?usp=sharing" target="_blank" rel="noopener">Downloads</a>
             </div>
 
-           
-            <div class="footer-menu">
-                <h3>Início</h3>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="https://cursosabeline.com.br/curso/gratis/anatomia-e-fisiologia-humana" target="_blank">Cursos</a></li>
-                    <li><a href="https://drive.google.com/drive/folders/1iohFhmsldMVFnj0c7UeRBglupQSvEgLR?usp=sharing" target="_blank">Downloads</a></li>
-                </ul>
+            <div class="rodape__menu">
+                <h3 class="p rodape__titulo rt-2">Sobre Nós</h3>
+                <a class="p rodape__link rl-info" href="#termos">Info. Empresa</a>
+                <a class="p rodape__link rl-contato" href="https://www.instagram.com/corpo_em_acao_21cti" target="_blank" rel="noopener">Contato</a>
+                <a class="p rodape__link rl-blog" href="#">Blog</a>
             </div>
 
-           
-            <div class="footer-menu">
-                <h3>Sobre Nós</h3>
-                <ul>
-                    <li><a href="#termos">Info. Empresa</a></li>
-                    <li><a href="https://www.instagram.com/corpo_em_acao_21cti" target="_blank"">Contato</a></li>
-                    <li><a href="#">Blog</a></li>
-                </ul>
-            </div>
-
-         
-            <div class="footer-menu">
-                <h3>Suporte</h3>
-                <ul>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Telefones</a></li>
-                    <li><a href="#">Chat</a></li>
-                </ul>
+            <div class="rodape__menu">
+                <h3 class="p rodape__titulo rt-3">Suporte</h3>
+                <a class="p rodape__link rl-faq" href="#">FAQ</a>
+                <a class="p rodape__link rl-telefones" href="#">Telefones</a>
+                <a class="p rodape__link rl-chat" href="#">Chat</a>
             </div>
         </div>
     </footer>
-
 
 </body>
 </html>
